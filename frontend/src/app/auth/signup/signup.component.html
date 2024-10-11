@@ -1,0 +1,50 @@
+<div class="container">
+   <div class="left" style="display: flex; flex-direction:column">
+      <h1 class="typeformfont"  style="text-align: center;font-weight: 100;color: rgb(0, 156, 0);">'Pakistan Circular Railways' (PCR)</h1>
+      <div class="leftinner">
+         <h1 class= ""style="display: inline-block; margin-right:5px">Sign Up</h1>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <p style="margin-bottom: 0;">create a new account</p>
+         <!-- signup -->
+         <form #f="ngForm" (ngSubmit)="onSubmitRegister(f)">
+            
+            <label for="name">name</label>
+            <input class="inputfields" type="text"  name="p3"spellcheck="false" ngModel required #p3="ngModel" />
+           
+           <label for="email">Email</label>
+           <input class="inputfields" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            email spellcheck="false" ngModel required #email="ngModel" autocomplete="new-password"/>
+
+           <label for="password">Password</label>
+           <input class="inputfields" type="password" name="p1" autocomplete="new-password" spellcheck="false" ngModel required #p1="ngModel" />
+           
+           <label for="confirm">Confirm Password</label>
+           <input class="inputfields" type="password" name="p2" autocomplete="off" spellcheck="false" ngModel required #p2="ngModel" />
+           
+           <div class="accept">
+             <input type="checkbox" id="terms">
+             <label for="terms">I agree to the <a href="#">terms of service</a></label>
+           </div>
+   
+           <input class="button" type="submit" [disabled]="f.invalid" value="Sign Up" />
+           
+         </form>
+         <p>already have an account? <a [routerLink]="['/signin']" href="">log in</a></p>
+         
+      </div>
+   </div>
+   
+   <div class="right svg">
+      <!-- <div class="cont1" style="width: 100%;"> -->
+         <!-- <div class="heading">
+            <h2>convert your sales into growth!</h2>
+         </div> -->
+         <!-- <div class="svg"> -->
+            <!-- <img class="svgpic" style="width: 100%;background-size: cover;" src="../../../assets/images/railways.jpg" alt=""> -->
+         <!-- </div> -->
+      <!-- </div> -->
+   </div>
+   
+</div>

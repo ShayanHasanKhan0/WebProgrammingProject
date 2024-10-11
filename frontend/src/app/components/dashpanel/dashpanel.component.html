@@ -1,0 +1,93 @@
+
+<nav class="main-menu">
+    <ul>
+        <li style="margin-bottom: 30px; margin-top: 25px;">
+            <a>
+                <img src="../../../assets/icons/user.png" style="width: 28px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px;" alt="">
+                <span class="nav-heading">
+                    Pakistan Circular Railways
+                </span>
+            </a>
+          
+        </li>
+        <li [routerLink]="['/d/alltrains']" *ngIf="is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg" style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    All active PCR trains
+                </span>
+            </a>
+          
+        </li>
+        <li [routerLink]="['/d/bookedtickets']" *ngIf="is_cust">
+            <a>
+                <img src="../../../assets//icons/create.svg" style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    view your booked tickets
+                </span>
+            </a>
+            
+        </li>
+        <li [routerLink]="['/d/viewschedules']" *ngIf="is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg"  style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    book tickets
+                </span>
+            </a>
+           
+        </li>
+
+        <li [routerLink]="['/d/admin/viewcustomers']" *ngIf="!is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg"  style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    view all customers
+                </span>
+            </a>
+           
+        </li>
+
+        <li [routerLink]="['/d/admin/addschedule']" *ngIf="!is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg"  style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    add schedules
+                </span>
+            </a>
+           
+        </li>
+
+        <li [routerLink]="['/d/admin/removetrain']" *ngIf="!is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg"  style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    remove trains
+                </span>
+            </a>
+           
+        </li>
+
+        <li [routerLink]="['/d/admin/earningsreport']" *ngIf="!is_cust">
+            <a>
+                <img src="../../../assets/icons/create.svg"  style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    earnings report
+                </span>
+            </a>
+           
+        </li>
+    </ul>
+    
+
+    <ul class="logout">
+        <li>
+           <a [routerLink]="['/logout']">
+            <img src="../../../assets/icons/logoff.svg" style="width: 30px; padding-left: 20px; padding-right: 20px; margin-bottom: 25px;" alt="">
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+</nav>

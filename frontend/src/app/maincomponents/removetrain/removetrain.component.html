@@ -1,0 +1,89 @@
+
+ <div class="loading" *ngIf="loading">
+    <app-loading></app-loading>
+  </div>
+  
+  <div class="background">
+    <div class="header">
+      <div class="heading1">
+            Admin Panel
+          <!-- <button class="createquizbutton" (click)="addRoot()">
+              <img src="../../../assets/icons/plus1.svg" class="plus" alt="">
+              <span>Create Form</span>
+          </button> -->
+          <div class="chartname">
+            <!-- Chart One -->
+          </div>
+      </div>
+      
+  
+      <div class="maincont" *ngIf="!loading">
+  
+        <!-- <label for="email" class="box1">Email address</label>
+        <input type="text" class="inputfield" matInput (change)="onChange()" disabled [(ngModel)]="userProfile.email"> -->
+      
+        <div class="overall">Delete PCR train</div>
+
+        <!--  -->
+        <form #a="ngForm" (ngSubmit)="removetrain(a)">
+  
+          <!-- <label class="box1">Train Name</label>
+          <input type="text" class="inputfield" autocomplete="off" placeholder="" value="" name="p1" value="" ngModel required #p1="ngModel">
+             -->
+             <label class="box1">This will delete all schedules associated with that train</label>
+             <label class="box1">Select Train</label>
+          <div class="trains">
+            <select name="languages" style="height: 50px;" id="lang" class="inputfield" name="train_id" value="" ngModel required #p6="ngModel" (change)="change(p6)">
+              <option value="{{item.trainid}}" *ngFor="let item of responses">{{item.trainname}}</option>
+            </select>
+  
+        
+          </div>
+  
+          <p class="social-text" style="color: #0a192f;font-weight: bold;font-size: 20px;" *ngIf="prompt">{{prompt}}</p>
+          <p class="social-text" style="color: red;font-weight: bold;font-size: 20px;" *ngIf="msg">{{msg}}</p>
+        
+          <input class="changebutton" type="submit" [disabled]="a.invalid" id="subbutton" value="remove train"/>
+
+        </form>
+  
+  
+      <!-- <div class="heading2">
+          <div class="overall">Overall performance</div>
+          <div class="performancerow">
+              <div class="box">
+                  <div class="box1">
+                      Starts
+                  </div>
+                  <div class="box2">12342</div>
+              </div>
+              <div class="box">
+                  <div class="box1">
+                      Completion
+                  </div>
+                  <div class="box2">113432</div>
+              </div>
+              <div class="box">
+                  <div class="box1">
+                      Completion %
+                  </div>
+                  <div class="box2">113432</div>
+              </div>
+              <div class="box">
+                  <div class="box1">
+                      Overall Drop-off
+                  </div>
+                  <div class="box2">113432</div>
+              </div>
+              <div class="box">
+                  <div class="box1">
+                      Overall Drop-off %
+                  </div>
+                  <div class="box2">--</div>
+              </div>
+          </div>
+          <div class="qbyq">Question by Question analysis</div>
+      </div> -->
+    </div>
+  </div>
+  
